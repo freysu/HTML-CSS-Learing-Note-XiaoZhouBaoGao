@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        li{
+            list-style: none;
+        }
+        .menu{
+            position:fixed;
+            bottom:100px;
+            right:100px;
+        }
+        .menu>li{
+            border:1px solid red;
+            width:50px;
+            height:50px;
+            position:relative;
+            overflow:hidden;
+        }
+        .show{
+            width:50px;
+            height:50px;
+        }
+        .click{
+            background-color:red;
+            width:50px;
+            height:50px;
+            position:absolute;
+            top:0px;
+            left:0px;
+            transform: rotate(45deg);
+            transform-origin:-50px 50px;
+            transition: transform 0.5s; 
+        }
+        .menu>li:hover > .click{
+            transform:rotate(0deg);
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>
+            <p class="show">首页</p>
+            <p class="click">首页</p>
+        </li>
+        <li>
+            <p class="show">视频</p>
+            <p class="click">视频</p>
+        </li>
+        <li>
+            <p class="show">电影</p>
+            <p class="click">电影</p>
+        </li>
+    </ul>
+</body>
+</html>

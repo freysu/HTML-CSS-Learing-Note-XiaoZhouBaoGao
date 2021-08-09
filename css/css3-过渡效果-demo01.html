@@ -1,0 +1,66 @@
+<!-- 
+设置旋转的原点
+transform-origin: 0 0；
+以动画的形式从0到45度，这就是过渡效果。
+
+过渡效果：transition
+transition-property         过渡属性（例如 transform）
+transition-duration         过渡持续时间（例如 1s）
+transition-timing-function  过渡函数
+transition-delay            过渡延迟时间
+简写：
+transition: 属性 秒数 函数 延迟;
+设置多个值：
+transition: 属性 秒数，属性 秒数。
+
+过渡属性
+例如：transition-property：transform; (形变 )
+
+过渡持续时间
+例如：transition-duration: 1s;（s为秒，单位）
+
+过渡函数
+transition-timing-function
+ease: 开始和结束慢，中间快。默认值。
+linear: 匀速。
+ease-in：开始慢。
+ease-out: 结束慢。
+ease-in-out: 和ease类似，但比ease幅度大。
+
+过渡延迟时间
+例如：transition-delay: 1s;（s为秒，单位）
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        margin: 100px auto;
+        /* 设置形变旋转原点 */
+        transform-origin: 0 0;
+        /* transition-property: transform; */
+        /* transition-duration:1s; */
+        /* transition-timing-function:ease; */
+        transition: transform 1s, width 1s, height 1s;
+      }
+      .box:hover {
+        transform: rotate(360deg);
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>hello</h1>
+    </div>
+  </body>
+</html>

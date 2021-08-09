@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业2-滚动菜单-复习</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style: none;
+        }
+        .menu{
+            margin-top:100px;
+        }
+        .menu>li{
+            float:left;
+            width:80px;
+            height:30px;
+            background-color:red;   
+            text-align:center;
+            line-height:30px;
+            overflow:hidden;
+        }
+        .show{
+            background-color: red;
+            transition: margin 0.5s;
+        }
+        .click{
+            background-color: yellow;
+        }
+        .menu>li:hover > .show{
+            margin-top:-30px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>
+            <p class="show">首页</p>
+            <p class="click">INDEX</p>
+        </li>
+        <li>
+            <p class="show">视频</p>
+            <p class="click">VIDEO</p>
+        </li>
+        <li>
+            <p class="show">电影</p>
+            <p class="click">MOVIES</p>
+        </li>
+    </ul>
+</body>
+</html>

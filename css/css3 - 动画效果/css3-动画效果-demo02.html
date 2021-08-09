@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes anim{
+            form{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .box{
+            height:200px;
+            width:200px;
+            margin:100px auto;
+            border-radius:50%;
+            overflow:hidden;
+            animation: anim 5s linear;
+        }
+        .box img{
+            height:200px;
+            width:200px;
+        }
+        .box:hover{
+            /* 停止动画效果 */
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <audio src="" controls></audio>
+    <div class="box">
+        <img src="images/jay.jpg" alt="">
+    </div>
+</body>
+</html>

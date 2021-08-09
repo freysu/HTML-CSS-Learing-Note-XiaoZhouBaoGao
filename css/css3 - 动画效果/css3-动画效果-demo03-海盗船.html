@@ -1,0 +1,130 @@
+<!-- 先布局再想动画 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>海盗船</title>
+    <style>
+      @keyframes wave {
+        50% {
+          transform: translate(-50px);
+        }
+      }
+      @keyframes ship {
+        50% {
+          transform: rotate(15deg);
+        }
+      }
+      @keyframes fish {
+        0% {
+          transform: rotate(-20deg);
+          left: 10px;
+          top: 500px;
+        }
+        10% {
+          transform: rotate(-5deg);
+          left: 300px;
+          top: 300px;
+        }
+        30% {
+          transform: rotate(-20deg);
+          left: 500px;
+          top: 550px;
+        }
+        50% {
+          transform: rotate(5deg);
+          left: 700px;
+          top: 300px;
+        }
+        70% {
+          transform: rotate(-20deg);
+          left: 800px;
+          top: 550px;
+        }
+        90% {
+          transform: rotate(5deg);
+          left: 1100px;
+          top: 300px;
+        }
+        100% {
+          transform: rotate(5deg);
+          left: 1300px;
+          top: 500px;
+        }
+      }
+
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .container {
+        width: 100%;
+        height: 800px;
+        overflow: hidden;
+      }
+      .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .fish {
+        position: absolute;
+        left: 10px;
+        top: 500px;
+        z-index: 3;
+        animation: fish 10s linear 1s infinite;
+      }
+      .sea {
+        margin-top: 450px;
+        position: relative;
+      }
+      .wave1 {
+        position: absolute;
+        top: 100px;
+        left: 0px;
+        height: 110px;
+        z-index: 100;
+        width: 130%;
+        animation: wave 2s ease-in infinite;
+      }
+      .wave2 {
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        height: 110px;
+        width: 130%;
+        z-index: 10;
+        animation: wave 3s ease-in infinite;
+      }
+      .wave3 {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 110px;
+        width: 130%;
+        z-index: 0;
+        animation: wave 5s ease-in infinite;
+      }
+      .ship {
+        position: absolute;
+        left: 30%;
+        z-index: 5;
+        animation: ship 5s ease infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/bg.png" alt="" class="bg" />
+      <img src="images/ship.png" alt="" class="ship" />
+      <img src="images/fish.png" alt="" class="fish" />
+      <div class="sea">
+        <img class="wave1" src="images/wave1.png" alt="" />
+        <img class="wave2" src="images/wave2.png" alt="" />
+        <img class="wave3" src="images/wave3.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

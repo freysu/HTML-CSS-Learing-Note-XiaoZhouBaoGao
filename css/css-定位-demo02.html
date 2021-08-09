@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pic-box{
+            /* 居中实现方法 */
+            /* 先写宽度在居中 */
+            width:628px;
+            margin:0 auto;
+            /* 参照物变成容器 父级>子级是relative>absolute或者absolute>absolute */
+            position: relative;
+        }
+        .list{
+            position:absolute;
+            top:10px;
+            left:500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pic-box">
+        <img src="D:\Frey\Documents\CodeStudy\前端学习\晓舟报告 - 《前端开发学习手册》配套案例\第02章：网页重构\第09节：css定位\images\pic.jpg" alt="">
+        <ul class="list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+</body>
+</html>

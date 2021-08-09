@@ -1,0 +1,69 @@
+<!-- 
+    position:
+    绝对定位：absolute
+    相对定位：relative
+    固定定位：fixed
+
+    坐标属性(非定位元素不起作用)
+    top,left,right,bottom,z-index
+
+    绝对定位（absolute）：
+    脱离文档流；
+    默认参照物为浏览器视窗的左上角。
+
+    相对定位（relative）:
+    不脱离文档流；
+    默认参照物为此元素原位置。
+
+    固定定位（fixed）:
+    脱离文档流；
+    默认参照物为浏览器视窗位置（尺寸）。
+
+    设置z轴（z-index）：
+    值为整数；
+    数值大则在前方显示。
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 2000px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border: 1px solid white;
+      }
+      .pos {
+        /* 绝对定位 */
+        /* position:absolute; */
+        /* 相对定位 */
+        /* position:relative; */
+        /* 固定定位 */
+        position: fixed;
+        top: 50px;
+        left: 80px;
+        /* 谁在谁之上显示 只能是整数 大小随意 */
+        z-index: 9;
+      }
+      .pos-ab {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        /* 负数：置底，会跑到非定位元素的下面 */
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">1</div>
+    <div class="box pos">2</div>
+    <div class="box pos-ab">3</div>
+  </body>
+</html>

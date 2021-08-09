@@ -1,0 +1,54 @@
+*{
+    margin:0;
+    padding:0;
+}
+.header{
+    /* 导航栏高度 */
+    height:60px;s
+    /* 初学者建议先加背景色 后期熟练可以不用写 */
+    /* background-color:yellow; */
+}
+.header .header_content{
+    width:1260px;
+    /* background-color:green; */
+    margin:0 auto;
+    height:100%;
+}
+.header .header_content .logo{
+    margin-top:16px;
+    float:left;
+}
+.header .header_content .nav li{
+    list-style: none;
+    float:left;
+    width:114px;
+    height:60px;
+    line-height:60px;
+    text-align:center;
+}
+/* 伪类选择器的应用 选择鼠标指针浮动在其上的元素 */
+.header .header_content .nav li:hover{
+    border-bottom: 2px solid #0084ff;
+    /* 边框在盒子的内部显示，防止内容部分被挤散 */
+    box-sizing: border-box;
+}
+.header .header_content .nav li a{
+    color:black;
+    text-decoration: none;
+}
+.container{
+    /* height不用设置 */
+    /* 一般设计师都会设成整数 */
+    width:1260px;
+    /* background-color: blue; */
+    /* 设宽度之后才可以用这个方法居中 */
+    margin:0 auto;
+}
+.container .content{
+    width:956px;
+    float:left;
+}
+.container .slider{
+    width:290px;
+    float:right;
+}

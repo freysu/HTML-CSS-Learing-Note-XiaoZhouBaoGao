@@ -1,0 +1,70 @@
+<!-- 
+我们之前讲解过的所有css知识，都是CSS2版本的功能。
+CSS3在CSS2版本的基础上，新增了很多特性，例如边框圆角、动画效果。
+在CSS2的时代，实现圆角必须要用图片才能实现，而CSS3只要一行样式就能实现圆角。
+在CSS2的时代，动画效果一定要使用JavaScript配合复杂的css样式操作才能实现（或者用jQuery这种第三方库）。CSS3同样可以简单地实现动画效果，而且效果更佳。
+早些年头，因为浏览器的兼容问题，并未广泛引用，但是近几年，随着随着各大浏览器厂商的标准化，大家可以畅快第使用CSS3了。
+
+CSS3常用的新特性：
+一、边框圆角
+二、阴影
+三、形变：旋转、缩放、位移
+四、过渡效果
+五、动画效果
+六、媒体查询
+七、flex布局
+八、grid布局
+等等（选择器、字体）......
+
+圆角
+border-radius:左上 右上 右下 左下
+如果设置两个值，第一个值表示左上和右下，第二个值表示右上和左下。
+
+阴影
+box-shadow: 10px 20px 30px blue;
+参数分别表示：x轴偏移量，y轴偏移量，模糊半径，阴影颜色（不设置颜色为黑色）
+
+形变
+transform:
+rotate();旋转 deg单位表示角度
+scale();缩放
+translate();位移
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        /* 让一个元素在网页中水平垂直居中 */
+        /* 1. 等高度等宽度可以按比例设置形变位移。 */
+        /* width:200px;
+            height:200px;
+            background-color: red;
+            margin:0 auto;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-100px,-100px); */
+
+        /* 2.不同高度宽度时用百分数可以实现 */
+        width: 500px;
+        height: 200px;
+        background-color: red;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>hello</h1>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!-- 
+    使用 rem 单位设置移动端尺寸
+
+    移动端的特点
+    1. 设备尺寸不同
+    2. 可以通过设置百分比解决
+    3. 设置百分比计算繁琐
+
+    单位概述
+    px：像素
+    em: 相对于父级的 font-size 值
+        父级的 font-size 值越大，子级的em就越大
+    rem: 相对于html标签的 font-size 值
+    html font-size: N px; 1rem 代表 N px; 10rem 代表10N px;
+    
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      /* .em{
+             font-size:20px;
+         } */
+      html {
+        font-size: 10px;
+      }
+      .em-box {
+        /* width: 10em;
+             height: 10em; */
+        width: 10rem;
+        height: 10rem;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="em">
+      <div class="em-box"></div>
+    </div>
+  </body>
+</html>

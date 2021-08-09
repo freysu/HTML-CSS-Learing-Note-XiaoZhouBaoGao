@@ -1,0 +1,35 @@
+<!-- 
+响应式页面是根据宽度高度等变换页面样式
+移动端和响应式页面是区别的
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+      }
+      /* 浏览器宽度600<x<900 变换样式 */
+      @media screen and (min-width: 600px) and (max-width: 900px) {
+        .box {
+          width: 200px;
+          height: 200px;
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

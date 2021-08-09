@@ -1,0 +1,39 @@
+<!-- 
+    1.制作一个图片之上显示数值列表的功能。
+    2.制作一个返回顶部的功能，一直在网页右下角显示。
+
+    1. 完成晓舟报告右侧返回顶部的悬浮效果[效果地址](http://www.xiaozhoubg.com/public/demo/frontend/2-9-1.html)。
+2. 制作一个在图片上显示图标描述文字的效果，并且图片再网页右下角显示[效果地址](http://www.xiaozhoubg.com/public/demo/frontend/2-9-2.html)。
+3. 制作一个标题效果，让标题左右两边各带一个横线（使用伪元素和定位来实现）[效果地址](http://www.xiaozhoubg.com/public/demo/frontend/2-9-3.html)。
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pic-box{
+            width:700px;
+            margin:0 auto;
+            position:relative;  
+        }
+        .list{
+            position:absolute;
+            top:10px;
+            left:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pic-box">
+        <img src="D:\Frey\Documents\CodeStudy\前端学习\晓舟报告 - 《前端开发学习手册》配套案例\第02章：网页重构\第09节：css定位\images\pic.jpg" alt="">
+        <ul class="list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+</body>
+</html>

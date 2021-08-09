@@ -1,0 +1,67 @@
+<!-- 
+    做过渡效果之前，先把布局想好。
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      li {
+        list-style: none;
+      }
+      /* 只要子级的li不会包括更下层的 */
+      .menu > li {
+        float: left;
+        border: 1px solid red;
+        height: 30px;
+      }
+      .sub-menu > li {
+        height: 0px;
+        overflow: hidden;
+        background-color: blue;
+        transition: height 0.5s ease;
+        color: white;
+      }
+      .menu > li:hover > .sub-menu > li {
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <ul class="menu">
+        <li>
+          书籍
+          <ul class="sub-menu">
+            <li>js高级程序设计</li>
+            <li>js高级程序设计</li>
+            <li>js高级程序设计</li>
+          </ul>
+        </li>
+        <li>
+          书籍
+          <ul class="sub-menu">
+            <li>js高级程序设计</li>
+            <li>js高级程序设计</li>
+            <li>js高级程序设计</li>
+          </ul>
+        </li>
+        <li>
+          书籍
+          <ul class="sub-menu">
+            <li>js高级程序设计</li>
+            <li>js高级程序设计</li>
+            <li>js高级程序设计</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

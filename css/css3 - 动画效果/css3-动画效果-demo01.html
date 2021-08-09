@@ -1,0 +1,78 @@
+<!-- 
+动画与过渡的区别：
+过渡效果通常用户与浏览器进行交互（例如hover）
+动画效果，可以交互，也可以在网页加载时直接执行，并且可以让效果更复杂。
+
+动画属性(animation)
+animation-name: 规定需要绑定到选择器的keyframe名称...
+animation-duration: 规定完成动画所花费的时间，以秒或毫秒计。
+animation-timing-function: 规定动画的速度曲线函数.
+animation-delay: 规定在动画开始之前的延迟。
+animation-iteration-count: 规定动画应该播放的次数。
+
+@keyframes anim{
+    0%{
+        transform: translate(0px,0px);
+    }
+    100%{
+        transform:translate(900px,100px);
+    }
+}
+
+停止动画效果
+animation-play-state:paused；
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* keyframes定义一个动画 */
+        @keyframes anim{
+            /* 1. 按百分比指定动画 */
+            /* 0%-50% 会转过去再转回来 类似过渡效果*/
+            /* 0%-100% 完整*/
+            /* 注意：开始与结束相同，可以让动画更平滑 */
+            0%{
+                transform: rotate(0deg);
+            }
+            20%{
+                width:200px;
+                height:200px;
+                transform: rotate(360deg);
+            }
+            40%{
+                background-color:yellow;
+                width:300px;
+                height:300px;
+            }
+            100%{
+                width:100px;
+                height:100px;
+            }
+            /* 2. from...to...指定动画 */
+            /* from:0%, to:100%  */
+            /* from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            } */
+        }
+        .box{
+            width:100px;
+            height:100px;
+            background-color:red;
+            margin:100px auto;
+            /* infinite 无限次 */
+            animation: anim 10s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

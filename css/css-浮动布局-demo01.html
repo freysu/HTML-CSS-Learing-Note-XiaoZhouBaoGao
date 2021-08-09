@@ -1,0 +1,46 @@
+<!-- 
+HTML元素的分类
+
+块元素：
+可以设置宽度和高度，独立成行。如h1-6，p,div,ul,li
+
+行内元素（内联元素、行级元素）：
+不可以设置宽度和高度，不独立成行。如a，span
+
+行内块元素：
+可以设置宽度和高度，不独立成行。如img,input,button
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a,
+      #h1-1 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        /* 
+            display属性
+            block:转换为块元素
+            inline:转换为行内元素
+            inline-block:转换为行内块元素
+            none:隐藏元素
+             */
+        display: none;
+      }
+      img {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <a id="h1-1">hello h1-1</a>
+    <a>hello h1-2</a>
+    <img src="http://img.xiaozhoubg.com/FnhSmWuOhn90sV3WHSFTMsXKm5n9" alt="" />
+    <img src="http://img.xiaozhoubg.com/FnhSmWuOhn90sV3WHSFTMsXKm5n9" alt="" />
+  </body>
+</html>

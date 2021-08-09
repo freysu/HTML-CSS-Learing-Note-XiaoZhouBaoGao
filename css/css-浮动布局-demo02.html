@@ -1,0 +1,57 @@
+<!-- 
+浮动元素的特性：
+脱离文档流 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 两个空的div清楚浮动 伪元素清楚浮动 */
+      .clear::before,
+      .clear::after {
+        /* 空内容 */
+        content: "";
+        /* 转换成块元素 */
+        display: block;
+        clear: both;
+      }
+      .content {
+        width: 300px;
+        height: 200px;
+        border: 1px solid red;
+        /* 设置元素浮动 */
+        float: left;
+      }
+      .aside {
+        width: 100px;
+        height: 200px;
+        border: 1px solid blue;
+        /* 设置元素浮动 */
+        float: left;
+      }
+      .box {
+        width: 400px;
+        height: 400px;
+        background-color: yellow;
+      }
+      /* .clear{
+            空div清楚浮动，清楚之前浮动的不良影响
+            clear:both;
+        } */
+    </style>
+  </head>
+  <body>
+    <!-- 容器加个Clear -->
+    <div class="container clear">
+      <div class="content">内容</div>
+      <div class="aside">边栏</div>
+    </div>
+    <!-- 空div清楚浮动
+    <div class="clear"></div> -->
+    <div class="box"></div>
+  </body>
+</html>

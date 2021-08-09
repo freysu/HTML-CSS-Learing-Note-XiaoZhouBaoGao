@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 浏览器兼容css2,css3 */
+        /* css2: 伪类选择器和伪元素选择器都是一个冒号 */
+        /* css3：让伪元素选择器增加了一个冒号 */
+
+        /* 伪元素选择器(增加元素)
+         如content属性：增加内容
+        selector::before    选择器的前面
+        selector::after     选择器的后面
+         */
+
+        /* .text::before{
+            content:"-----";
+        }
+        .text::after{
+            content:"-----";
+        } */
+
+        .text::before, .text::after{
+            content:"-----";
+            color:red;
+        }
+        
+    </style> 
+</head>
+<body>
+    <h1 class="text">hello world</h1>
+    <h2 class="text">hello world</h2>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!-- 
+HTML5是超文本标记语言（html）的第五次重大修改，可以简单的理解为是html的第五个大版本。
+
+某些情况会将HTML5简称为H5
+
+某些情况说HTML5（H5）表示的是HTML的第五个版本。
+某些情况说HTML5（H5）表示的是移动端的网页效果。
+某些情况说HTML5（H5）表示的是HTML5、CSS3、以及HTML5配套的JavaScript接口。例如操作视频，操作画布，获取地理信息等。
+某些情况说HTML5（H5）表示的是手机端整屏的轮播图效果。
+
+HTML5新特性
+一、布局元素
+二、媒体元素
+三、画布（<canvas>），例如刮刮乐。
+四、SVG（定义矢量图）
+五、表单新特性
+
+布局元素相当于一个有语义的div。
+
+header：网页头部
+nav：导航栏
+aside：侧标栏
+article：显示文章
+section：布局的一部分
+footer：网页页脚
+
+媒体元素
+一、audio 音频
+二、video 视频
+
+媒体元素属性
+一、controls 显示控制面板
+二、autoplay 视频自动播放
+三、muted 静音
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            width:800px;
+            border:1px solid red;
+            margin:0 auto;
+        }
+        video{
+            width:50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        logo
+    </header>
+    <!-- 音频播放器默认效果 -->
+    <audio src="media/again.mp3" controls></audio>
+    <!-- 新版音频 视频先静音才能自动播放，旧版的可以直接自动播放 -->
+    <video src="media/video.mp4" controls autoplay muted></video>
+</body>
+</html>

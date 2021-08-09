@@ -1,0 +1,116 @@
+<!-- 
+    flex 布局又叫弹性布局（或者叫弹性盒子布局），
+这是一种更先进的布局方式，可以让网页布局更简洁，更易于维护。
+基本概念
+将元素设置为display：flex；元素会变为一个 flex 容器。
+容器内部的元素为 flex 元素或者叫 flex 项目（flex-item）。
+main axis：主轴
+cross axis：交叉轴
+1. flex 项目在 flex 容器中延主轴排列。
+我的理解：flex 项目默认是横向显示左对齐。
+2. flex 项目高度适应flex容器高度（同行内元素）
+我的理解：flex 项目不设高度时是自动撑满的。
+
+
+设置flex容器 常用的三个属性
+flex-direction: 设置 flex 项目排列方向
+justify-content: flex 项目主轴排列方式
+align-items: flex 项目在交叉轴的排列方式
+
+flex-direction:
+row(默认值)：主轴为水平方向，起点在左端。
+row-reverse:主轴为水平方向，起点在右端。
+column:主轴为垂直方向，起点在上沿。
+column-reverse：主轴为垂直方向，起点在下沿。
+
+justify-content:
+flex-start(默认值)：左对齐
+flex-end：右对齐
+center:居中
+space-between: 两端对齐，项目之间的间隔都相等
+space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+
+align-item:
+flex-start: 交叉轴的起点对齐。
+flex-end: 交叉轴的终点对齐。
+center: 交叉轴的中点对齐。
+stretch(延申)（默认值）：如果项目未设置高度或设为 auto ,将占满整个容器的高度。
+
+
+flex 项目
+flex-grow: 属性定义项目的放大比例，默认为 0 ，空间充足，等比例补全。
+flex-shrink: 定义了项目的缩小比例，默认为 1 ，即如果空间不足，该项目将缩小。
+flex-basis: 主轴排列为宽度，交叉轴排列为高度，设置 px ，默认值为 auto。
+flex: 综合上面的三个样式。
+align-self： flex 项目的对齐方式（ auto | flex-start | flex-end | center | baseline | stretch ） 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        body,html{
+            height:100%;
+        }
+        .list{
+            width:100%;
+        }
+        li{
+            list-style: none;
+        }
+        .list-block{
+            display:flex;
+            justify-content:space-between;
+        }
+        .list-block img{
+            border:1px solid green;
+        }
+        .list-dsc{
+            border:1px solid black;
+            
+            margin-top:15px;
+        }
+        .list-dsc .title{
+            font-size:18px;
+            margin-bottom:10px;
+        }
+        .list-dsc .time{
+            font-size:12px;
+            color:#b2b2b2;
+        }
+        .enter{
+            align-self:center;
+            border:1px solid red;
+            text-decoration: none;
+            background-color: rgba(2, 2, 252, 0.541);
+            line-height:30px;
+            text-align:center;
+            color:white;
+            width:60px;
+            height:30px;
+            border-radius: 30%;
+        }
+    </style>
+</head>
+<body>
+    <ul class="list">
+        <li>
+            <div class="list-block">
+                <img src="D:\Frey\Documents\CodeStudy\WebStorm_Projects\test\晓舟报告学习笔记\css\css-还原设计稿-作业\images\fepic.png" alt="">
+                <div class="list-dsc">
+                    <p class="title">前端开发学习手册</p>
+                    <p class="time">2021年7月30日</p>
+                </div>
+                <a href="" class="enter">进入</a>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

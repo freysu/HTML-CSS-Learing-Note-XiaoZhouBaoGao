@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 层级选择器 selector1 selector2
+        如.className 类选择器+ +元素选择器 */
+        /* .box1 h1{
+            color:red;
+        } */
+
+        /* 组合选择器 selector1,selector2
+        如元素+，+元素 
+        可以和层级选择器嵌套，.className选择器+ +元素选择器+，+元素选择器 */
+        .box1 h1,h2{
+            color:red;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <h1>hello h1</h1>
+        <h2>hello h2</h2>
+    </div>
+
+    <div class="box2">
+        <h1>hello h1</h1>
+    </div>
+</body>
+</html>

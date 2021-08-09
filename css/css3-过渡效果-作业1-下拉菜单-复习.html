@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style: none;
+        }
+        .menu>li{
+            float:left; 
+            height:30px;
+            background-color:red;
+        }
+        .sub-menu>li{
+            height: 0px;
+            overflow:hidden;     
+            background-color: blue;
+            color:white;
+            transition:height 0.5s ease;
+        }
+        .menu>li:hover > .sub-menu>li {
+            height:30px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>
+            书籍
+            <ul class="sub-menu">
+                <li>js高级程序设计</li>
+                <li>js高级程序设计</li>
+                <li>js高级程序设计</li>
+            </ul>
+        </li>
+        <li>
+            书籍
+            <ul class="sub-menu">
+                <li>js高级程序设计</li>
+                <li>js高级程序设计</li>
+                <li>js高级程序设计</li>
+            </ul>
+        </li>
+        <li>
+            书籍
+            <ul class="sub-menu">
+                <li>js高级程序设计</li>
+                <li>js高级程序设计</li>
+                <li>js高级程序设计</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

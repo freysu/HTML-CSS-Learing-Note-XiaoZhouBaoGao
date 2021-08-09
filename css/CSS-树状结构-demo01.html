@@ -1,0 +1,58 @@
+<!-- 
+    树状结构——看到设计稿的时候最好写出它的树状结构： 
+    
+    节点之间的关系:
+    根节点：每一个树状结构都有一个没有父级的节点，它被称作根节点。
+    父级节点：司马防是司马懿的父级，司马懿是司马师的父级。
+    子级节点：司马师是司马懿的子级，司马懿是司马防的子级。
+    同级关系：有相同父级的节点就是同级关系，司马懿和司马朗是同级，司马昭和司马亮是同级。（这里需要注意的是，司马炎和司马熙不是同级，因为他们没有相同的父级。）
+
+    html文件树状结构的节点:
+    元素节点
+    属性节点
+    文本节点
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/CSS-树状结构-demo01.css">
+</head>
+<body>
+    <div class="title">
+        <h2>
+            精选手册
+            <a href="">查看更多></a>
+        </h2>
+    </div>
+    <div class="list">
+        <!-- ul>li*2 快速生成 -->
+        <ul>
+            <li class="clear">
+                <div class="img">
+                    <img src="D:\Frey\Documents\CodeStudy\前端学习\晓舟报告 - 《前端开发学习手册》配套案例\第02章：网页重构\第08节：树状结构\images\jq.jpg" alt="">
+                </div>
+                <div class="describe">
+                    <h3>前端开发学习手册</h3>
+                    <p>2019/12/23</p>
+                    <a href="">阅读</a>
+                </div>
+            </li>
+            <li>
+                <div class="img">
+                    <img src="D:\Frey\Documents\CodeStudy\前端学习\晓舟报告 - 《前端开发学习手册》配套案例\第02章：网页重构\第08节：树状结构\images\jq.jpg" alt="">
+                </div>
+                <div class="describe">
+                    <h3>前端开发学习手册</h3>
+                    <p>2019/12/23</p>
+                    <a href=""></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

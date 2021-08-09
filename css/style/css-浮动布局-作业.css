@@ -1,0 +1,31 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.list .pic img{
+    width:200px;
+    height:150px;
+}
+.pic{
+    width:200px;
+    float:left;
+}
+.title{
+    width:300px;
+    float:left;
+}
+.clear::after,.clear::before{
+    content:"";
+    display: block;
+    clear:both;
+}
+.title a{
+    display:block;
+    width:80px;
+    height:30px;
+    background-color: green;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;
+}

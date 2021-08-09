@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+}
+.clear::after,.clear::before{
+    content:"";
+    display:block;
+    clear:both;
+}
+.title{
+    width:800px;
+    height:30px;
+    border:1px solid red;
+}
+.title h2{
+    font-size:16px;
+    line-height: 30px;
+}
+.title h2 a{
+    font-size:12px;
+    color:#aaa;
+    float:right;
+    text-decoration:none;
+}
+.list .img{
+    float:left;
+}
+.list .describe{
+    float:left;
+}

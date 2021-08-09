@@ -1,0 +1,65 @@
+/* 制作一个简易版的文章列表，要求如下：
+
+1. 列表容器边框为蓝色，宽度为980px。
+2. 列表元素宽900px，边框为红色，每一个列表元素都包含着文章标题和文章描述。
+3. 列表元素之间的间距为20px。
+4. 文章标题与列表上边距距为10px。
+5. 文章描述与标题的上边距为10px，距离底部边距为10px。
+6. 文章标题与文章列表距离列表的左边距为20px。
+7. 列表整理有三个元素。 */
+
+
+.article1,.article_list{
+    /* border-width:1px;
+    border-style:solid;
+    border-color:blue; */
+    border:1px solid blue;
+    width:980px;
+    margin:0 auto;
+    box-sizing: border-box;
+    margin-bottom:10px;
+
+}
+
+.web_container{
+    width:900px;
+    border:1px solid red;
+    margin-bottom:20px;
+    box-sizing: border-box;
+    /* margin:0px 0px 20px 0px; */
+}
+
+.web_title{
+    margin-top:10px;
+    padding-left:2px;
+}
+
+.web_data{
+    margin-top:-20px;
+    margin-bottom:5px;
+    color: #c9c9c9;
+}
+
+.web{
+    list-style:none;
+}
+
+img{
+    width: auto;
+    height: 80px;
+    float:left;
+    margin-right:10px;
+    padding-top:5px;
+    padding-left:5px;
+}
+
+.article_list .seemore{
+    float:right;
+    color: rgb(158, 158, 158);
+    margin-top:-45px;
+    padding-right: 10px;
+}
+
+.article_list,.article_name {
+    padding-left:5px;
+}

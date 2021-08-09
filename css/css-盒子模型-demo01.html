@@ -1,0 +1,58 @@
+<!--
+盒子模型的CSS属性
+边框：border-width,border-style,border-color;
+外边距：margin(-top\-right\-bottom\-left)
+内边距：padding(-top\-right\-bottom\-left)
+
+值      描述
+none    定义无边框
+dotted  定义点状边框
+dashed  定义虚线
+solid   定义实线
+double  定义双线
+
+元素的实际宽度：border-left + border-right + width + padding-left + padding-right
+元素的实际高度：border-top + border-bottom + height + padding-top + padding-bottom
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:100px;
+            height: 100px;
+            /* border-width: 10px;
+            border-style: solid;
+            border-color:red; */
+            border:10px solid red;
+            /* margin-left:100px;
+            margin-top:50px; */
+
+            /* 4个值：上右下左 */
+            margin:100px 0 0 200px;
+            /* 2个值: 上下 左右 */
+            margin:100px 50px;
+
+            /* padding-top:10px;
+            padding-left:20px; */
+            /* /2个值：上下 左右 */
+            padding:10px 20px;
+            
+            /* 设置box的实际情况 
+                元素的实际宽度：width
+                .........高度：height
+            */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="">test</a>
+    </div>
+</body>
+</html>

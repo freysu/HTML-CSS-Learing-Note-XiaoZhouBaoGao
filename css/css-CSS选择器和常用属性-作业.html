@@ -1,0 +1,54 @@
+<!-- 按要求完成网页：
+1. √设置一个宽度为980px的div容器，背景颜色为黄色。
+2. √容器内部显示一篇文章，文章有标题，图片和段落文字和列表。
+3. √标题字体16px，居中显示。
+4. √标题下方显示作者信息和文章发布日期，字体颜色为#aaaaaa，字体大小为12px
+5. √除上述文字外，所有字体颜色为黑色，字体大小为14px;
+6. √图片在两个段落间显示，宽度为300px，高度为200px。
+7. √列表为无序列表
+8. √至少包含2个段落文字。 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .article{
+            width:980px;
+            background-color: yellow;
+        }
+        .article h1{
+            font-size:16px;
+            text-align:center;
+        }
+        .author-time{
+            color:#aaaaaa;
+            font-size:12px;
+        }
+        .article img{
+            width: 300px;
+            height: 200px;
+        }
+        .nostyle {
+            color: black;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="article">
+        <h1>hello h1</h1>
+        <p class="author-time"> FreySu 2021年7月17日</p>
+        <p class="nostyle">This is a paragraph.</p>
+        <img src="smile.png" alt="">
+        <p class="nostyle">This is a paragraph.</p>
+        <ul class="nostyle">
+            <li>Apple</li>
+            <li>Bear</li>
+            <li>Pineapple</li>
+        </ul>
+    </div> 
+</body>
+</html>
